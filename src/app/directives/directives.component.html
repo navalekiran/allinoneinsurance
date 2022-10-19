@@ -1,0 +1,30 @@
+<p>directives works!</p>
+<!--structural derectives-->
+      <!--ngif-->
+      <!--ngfor-->
+      <!--ngswitch-->
+
+      <h2 style="color: red;">ngif derectivs</h2>
+      <p *ngIf="(age>18)">age is {{age}} this is greter than 18</p>
+<h2 style="color: green;">ngfor derective</h2>
+      <select >
+            <!--option value="course">BE </option>
+            <option value="course">BTECH</option>
+            <option value="course">BCA</option>
+            <option value="course">BSC</option-->
+                  <option *ngFor="let x of stud">{{x}}</option>
+      </select>
+      <table>
+            <tr>name</tr>
+            <td *ngFor="let y of stud">{{y}}</td>
+
+      </table>
+      <h2 style="color: yellow;">ngSwitch</h2>
+      <div [ngSwitch]="num">
+            <div *ngSwitchCase="1">one</div>
+            <div *ngSwitchCase="2">Two</div>
+            <div *ngSwitchCase="3">Three</div>
+            <div *ngSwitchCase="4">Four</div>
+            <div *ngSwitchCase="5">Five</div>
+            <div *ngSwitchDefault> {{num}} is defualt value</div>
+      </div>
